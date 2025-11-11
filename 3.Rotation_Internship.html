@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotations & Internships</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f8f8f8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            background: #2c3e50;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+        nav a:hover {
+            background: #34495e;
+        }
+        .container {
+            width: 90%;
+            max-width: 1400px;
+            margin: 20px auto;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            display: flex;
+        }
+        main {
+            flex: 1;
+            padding: 2.5rem;
+        }
+        h1, h2, h3, h4 {
+            color: #2c3e50;
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.75rem; }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        hr {
+            border: 0;
+            height: 1px;
+            background: #ddd;
+            margin: 2rem 0;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+        p, li {
+            margin-bottom: 1rem;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background-color: #f2f2f2;
+            color: #555;
+        }
+        td:first-child {
+            width: 35%;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="1.UPittBioE.html">Bioengineering</a>
+        <a href="2.UPittElectrical.html">ECE (Pitt)</a>
+        <a href="3.Rotation_Internship.html">Internships</a>
+        <a href="4.GWUElectrical.html">ECE (GWU)</a>
+        <a href="5.EmbeddedSw_Midas.html">Embedded SW</a>
+    </nav>
+
+    <div class="container">
+        <main>
+            <h1>Rotations at Computer Science Department University of Pittsburgh and BOSCH Pittsburgh (2006-2007)</h1>
+            <hr>
+            <p>Unix Socket pub/sub application design, and driver for Controller Area Network (CAN)</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Project</th>
+                        <th>Summary</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="design_document_alert_system_in_s-citi.pdf">Unix Socket</a> Alerting application on ARM wireless PDA's</td>
+                        <td>
+                            <p><strong>UNIX socket programming</strong> of wireless ARM Sharp PDA. I tested the implementation of the <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.39.4488&rep=rep1&type=pdf"> adhoc-clustering</a> algorithm, developed at University of Pittsburgh.</p>
+                            <p>During the summer rotation I wrote a simple client-server application in Linux (sockets) that used the underlying adhoc-routing infrastructure, to transmit messages between the PDA's. Also wrote up the specifications document for an alert system, that tracked users in a building to come up with speedy evacuation notification system during an emergencies. I came up with the idea to build it on a publisher-subscriber design pattern similar to how users subscribe to in a chat applications</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="can_middleware_design_document.pdf">CAN driver</a> design document, threaded C++ implementation and integration with PRISM middleware done jointly with another developer</td>
+                        <td>Designed and implemented a higher layer protocol on top of a Control Area Network (CAN), during my <strong>internship</strong> at BOSCH Pittsburgh. The driver was integrated with the PRISM architectural middleware developed by BOSCH and implemented addressing, fragmentation and reassembly of packets</td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+    </div>
+
+</body>
+</html>
