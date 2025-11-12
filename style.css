@@ -1,0 +1,133 @@
+/* === GLOBAL STYLES & MOBILE-FIRST DEFAULTS === */
+/* These styles apply to ALL screen sizes unless overridden */
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* This container will wrap our content. 
+   On mobile, it's 100% width. On desktop, it will have a max-width. */
+.container {
+  width: 90%;
+  margin: 0 auto; /* Centers the container */
+}
+
+/* Make images and videos flexible */
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+/* === HEADER & NAVIGATION (Mobile-First) === */
+.header {
+  background: #333;
+  color: #fff;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.navigation ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  background: #444;
+}
+
+/* Navigation links are stacked on mobile */
+.navigation li {
+  display: block;
+  border-bottom: 1px solid #555;
+}
+
+.navigation a {
+  display: block;
+  padding: 1rem;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+}
+
+.navigation a:hover {
+  background: #555;
+}
+
+/* === MAIN LAYOUT (Mobile-First) === */
+/* On mobile, all sections are just 100% width and stack vertically */
+.main-layout {
+  padding: 1rem 0;
+}
+
+.main-content {
+  background: #fff;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.sidebar {
+  background: #eee;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* === FOOTER === */
+.footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 0;
+  margin-top: 1rem;
+}
+
+/* ======================================================== */
+/* ===         DESKTOP STYLES (MEDIA QUERY)             === */
+/* ======================================================== */
+
+/* When the screen is 768px or WIDER, these styles take effect */
+
+@media (min-width: 768px) {
+
+  /* Make the container wider on desktop */
+  .container {
+    width: 85%;
+    max-width: 1100px; /* Set a max limit for very large screens */
+  }
+
+  /* --- Navigation --- */
+  /* Turn the stacked mobile nav into a horizontal one */
+  .navigation ul {
+    display: flex; /* Use Flexbox for the horizontal menu */
+    justify-content: center; /* Center the links */
+  }
+
+  .navigation li {
+    border-bottom: none; /* Remove the mobile border */
+    border-right: 1px solid #555; /* Add a side border */
+  }
+
+  .navigation li:last-child {
+    border-right: none; /* Remove border from last item */
+  }
+
+  /* --- Main Layout --- */
+  /* Use CSS Grid to create a 2-column layout (content + sidebar) */
+  .main-layout {
+    display: grid;
+    grid-template-columns: 3fr 1fr; /* Main content is 3x wider than sidebar */
+    grid-gap: 1.5rem;             /* Creates space between the columns */
+  }
+
+  /* Remove the extra margins we needed for mobile stacking */
+  .main-content {
+    margin-bottom: 0;
+  }
+
+  .sidebar {
+    margin-bottom: 0;
+  }
+
+}
